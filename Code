@@ -1,0 +1,131 @@
+const prompt = require('prompt-sync')();
+
+function end(){
+  for(let i=1;i<=1;i++){
+    let t=prompt("this is your last chance=");
+    t=Number.parseInt(t)
+    if(t==33 &&t==43){
+      console.log("congratulation u won")
+    }
+    else {
+      console.log("u lost the game")
+    }
+  }
+}
+
+
+
+function lastchance2(){
+  for(let i=1;i<=1;i++){
+    let bb=prompt("ENTER THE LAST INPUT=")
+    bb=Number.parseInt(bb);
+    if(bb==33){
+      console.log("-----------------------------------------------")
+      console.log("CONGRATS U WON THE GAME IN 3RD TRIAL")
+      console.log("                                          ")
+      console.log("congratulatons u won the game")
+       console.log("-----------------------------------------------")
+    }
+    else 
+      console.log("-----------------------------------------------")
+      console.log("O SHIT U LOOSE VERY BADLY")
+      CONSOLE.LOG("                                              ")
+      console.log("BETTER LUCK NEXT TIME")
+       console.log("-----------------------------------------------")
+  }
+}
+
+
+
+function onetimeinput(){
+  for(let i=1;i<=1;i++){
+    let r
+     r=prompt("ENTER THE LAST INPUT=" );
+    r=Number.parseInt(r);
+    if(r==43){
+      console.log("-----------------------------------------------")
+      console.log("CONGRATS U WON THE GAME IN 3RD TRIAL")
+      console.log("                                          ")
+      console.log("congratulatons u won the game")
+       console.log("-----------------------------------------------")
+    }
+    else{
+       console.log("-----------------------------------------------")
+      console.log("O SHIT U LOOSE VERY BADLY")
+      CONSOLE.LOG("                                              ")
+      console.log("BETTER LUCK NEXT TIME")
+       console.log("-----------------------------------------------")
+    }
+  }
+}
+
+
+function input2nd(){
+  let d=prompt("ENTER 2ND NO AGAIN=")
+  d=Number.parseInt(d)
+  if(d==43){
+    console.log("--------------------------------------------------")
+    console.log("CONGRATS U WIN THE GAME IN 2ND TRIAL");
+    console.log("                                       ")
+    console.log("U WIN IPHONE 12")
+    console.log("--------------------------------------------------")
+     }
+  else {
+    console.log("U HAVE A LAST CHANCE CHOOSE IT CAREFULLY");
+    return onetimeinput();
+    }
+  }
+function input1st(){
+  let aa=prompt("ENTER 1ST NO AGAIN")
+  aa=Number.parseInt(aa);
+  if(aa==33){
+    console.log("enter entered both number correctly")
+    console.log("--------------------------------------------------")
+    console.log("CONGRATS U WIN THE GAME IN 2ND TRIAL");
+    console.log("                                       ")
+    console.log("U WIN IPHONE 12")
+    console.log("--------------------------------------------------")
+  }
+  else{
+    console.log("U HAVE A LAST CHANCE CHOOSE IT CAREFULLY");
+    return lastchance2()
+  }
+}
+
+
+
+
+function userinput(){
+  let a=prompt("ENTER THE 1ST NO=")
+  a=Number.parseInt(a)
+  let b=prompt("ENTER THE 2ND NO=")
+  b=Number.parseInt(b)
+  if(a==33 && b!=43){
+    console.log("U ENTER 1ST NO IS CORRECT 2ND NO IS INCORRECT")
+    console.log("1st no=",a)
+     return input2nd()
+  }
+    else if(a!=33 &&b==43){
+      console.log("U ENTER 1ST NO IS INCORRECT 2ND NO IS CORRECT")
+      console.log("2nd no=",b)
+      return input1st();
+    }
+
+
+  else if (a==33 && b==43){
+    console.log("--------------------------------------------------")
+    console.log("CONGRATS U WIN THE GAME IN 1ST TRIAL")
+    console.log("                                    ")
+    console.log("U WIN IPHONE 15")
+    console.log("--------------------------------------------------")
+
+  }
+    
+  else 
+    console.log("U ENTERED BOTH NUMBER INCORRECT")
+  userinput();
+
+}
+
+
+userinput()
